@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="@color/corDeFundo"
+    android:orientation="vertical"
+    tools:context=".LoginScreen">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="340dp"
+        android:layout_height="140dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="35dp"
+        android:layout_marginTop="50dp"
+        android:padding="6dp"
+        android:src="@drawable/logosejaainspiracao" />
+
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="320dp"
+        android:layout_height="66dp"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@color/botaoInput"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/corDeFundo"
+        android:textColorHint="@android:color/white" />
+
+    <EditText
+        android:id="@+id/edtSenha"
+        android:layout_width="320dp"
+        android:layout_height="66dp"
+        android:layout_below="@id/edtEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@color/botaoInput"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/corDeFundo"
+        android:textColorHint="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtSenha"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnLogar"
+                android:layout_width="180dp"
+                android:layout_height="66dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:background="@color/botaoVerde"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:id="@+id/relprogress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/borao_redondo"
+        android:elevation="30dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress_bar_loading"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_below="@+id/txtcarr"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/txtcarr"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Checando credenciais..."
+            android:textColor="@android:color/black"
+            android:textSize="26dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#0d64ba</color>
+    <color name="colorAccent">#000000</color>
+    <color name="corDeFundo">#ffffff</color>
+    <color name="darkG">#515151</color>
+    <color name="ButtonColor">#061468</color>
+    <color name="textoCabecalho">#ffffff</color>
+    <color name="textoListas">#000000</color>
+    <color name="btnTempo">#353535</color>
+    <color name="btnTemrpo">#06800e</color>
+    <color name="botaoInput">#081158</color>
+    <color name="botaoVerde">#1f5b28</color>
+    <color name="btnVoltar">#0f1b50</color>
+    <color name="searchColor">#dfdfdf</color>
+    <color name="corTopo">#0f1b50</color>
+    <color name="corN">#e1e1e1</color>
+
+
+</resources>

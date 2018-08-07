@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e4e4e4"
+    tools:context=".DashboardActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_border_top">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/rotary_logo" />
+
+        <TextView
+            android:id="@+id/nomeDoClube"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:text="Nome do Clube"
+            android:textColor="@color/textoCabecalho"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/btnVoltar"
+            android:src="@drawable/ic_back" />
+
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/txtreg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="6dp"
+            android:text="REGISTROS DE EQUIPAMENTOS"
+            android:textAlignment="center"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtreg">
+
+        <RelativeLayout
+            android:id="@+id/dash_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/txtEquipCadastrados"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#2e6dc6"
+                        android:gravity="center_vertical"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="32dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/txtEquipCadastrados"
+                        android:drawableRight="@drawable/next_btn"
+                        android:gravity="center_vertical"
+                        android:text="Cadastrados"
+                        android:textAlignment="center"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:background="@color/corN"
+                        android:id="@+id/txtcadeiras"
+                        android:layout_width="22dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtEquipCadastrados"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:gravity="center_vertical"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:background="@color/corN"
+                        android:id="@+id/txtbanho"
+                        android:layout_width="22dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtcadeiras"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:gravity="center_vertical"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:background="@color/corN"
+                        android:id="@+id/txtoutros"
+                        android:layout_width="22dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtbanho"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="30dp"
+                        android:gravity="center_vertical"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtNcadeiras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtEquipCadastrados"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/txtcadeiras"
+                        android:gravity="center_vertical"
+                        android:text="Cadeiras de roda"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtNbanho"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtNcadeiras"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/txtbanho"
+                        android:gravity="center_vertical"
+                        android:text="Cadeiras de banho"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txtNoutros"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txtNbanho"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/txtoutros"
+                        android:gravity="center_vertical"
+                        android:text="Outros"
+                        android:textAlignment="center"
+                        android:textSize="18dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card1"
+                android:layout_margin="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtEquipDisponiveis"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/round_box_1"
+                        android:gravity="center_vertical"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="32dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/txtEquipDisponiveis"
+                        android:drawableRight="@drawable/next_btn"
+                        android:gravity="center_vertical"
+                        android:text="Disponíveis"
+                        android:textAlignment="center"
+                        android:textSize="22dp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card2"
+                android:layout_margin="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/txtEquipIndisponiveis"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/round_box_2"
+                        android:gravity="center_vertical"
+                        android:text="0"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="32dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/txtEquipIndisponiveis"
+                        android:drawableRight="@drawable/next_btn"
+                        android:gravity="center_vertical"
+                        android:text="Em uso"
+                        android:textAlignment="center"
+                        android:textSize="22dp" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

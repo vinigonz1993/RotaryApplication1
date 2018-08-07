@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e4e4e4"
+    tools:context=".TelaInicial">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_border_top">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/rotary_logo" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/nomeDoClube"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:padding="8dp"
+            android:text="Nome do Clube"
+            android:textColor="@color/textoCabecalho"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="10dp"
+            android:background="#00ffffff"
+            android:drawableLeft="@drawable/ic_logout"
+            android:textColor="@color/textoCabecalho" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/dashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <Button
+                    android:id="@+id/btnDashboard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/botaomenu"
+                    android:drawableLeft="@drawable/ic_dashboard"
+                    android:drawableRight="@drawable/next_btn"
+                    android:padding="20dp"
+                    android:text="DashBoard"
+                    android:textColor="@color/textoListas" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/pacientescrd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dashboard"
+                android:layout_margin="2dp">
+
+                <Button
+                    android:id="@+id/btnPacientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/btnDashboard"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/botaomenu"
+                    android:drawableLeft="@drawable/ic_pc"
+                    android:drawableRight="@drawable/next_btn"
+                    android:padding="20dp"
+                    android:text="Pacientes"
+                    android:textColor="@color/textoListas" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cadeira"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pacientescrd"
+                android:layout_margin="2dp">
+
+                <Button
+                    android:id="@+id/btnCadeiras"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/btnPacientes"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/botaomenu"
+                    android:drawableLeft="@drawable/ic_cadeira"
+                    android:drawableRight="@drawable/next_btn"
+                    android:padding="20dp"
+                    android:text="Cadastrar equipamento"
+                    android:textColor="@color/textoListas" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/calendariocrd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cadeira"
+                android:layout_margin="2dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnCalendario"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/botaomenu"
+                        android:drawableLeft="@drawable/ic_calendar"
+                        android:drawableRight="@drawable/next_btn"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="20dp"
+                        android:text="Calendário de Devolução"
+                        android:textColor="@color/textoListas" />
+
+                    <Button
+                        android:id="@+id/btnTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/notify"
+                        android:gravity="center_vertical"
+                        android:text="0 expirados"
+                        android:textAlignment="center"
+                        android:textColor="@color/corDeFundo"
+                        android:textSize="8dp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/historico"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/calendariocrd"
+                android:layout_margin="2dp">
+
+                <Button
+                    android:id="@+id/btnHistorico"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/btnCalendario"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/botaomenu"
+                    android:drawableLeft="@drawable/hist_icone"
+                    android:drawableRight="@drawable/next_btn"
+                    android:padding="20dp"
+                    android:text="Histórico de Devolução"
+                    android:textColor="@color/textoListas" />
+
+
+            </android.support.v7.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

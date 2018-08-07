@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cardfundo"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00035c"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:text="NOME DO PACIENTE"
+                android:textColor="@android:color/white"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/rel1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/itemNome">
+
+                <TextView
+                    android:id="@+id/idn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="#1"
+                    android:textColor="#00035c"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/itemEquipamento"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/idn1"
+                    android:paddingLeft="8dp"
+                    android:text="Equipamento"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/itemTimestamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/itemEquipamento"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="2dp"
+                    android:text="Data em que foi add o equipamento"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp"
+                    android:textStyle="italic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel2">
+
+                <TextView
+                    android:id="@+id/itemTelefone"
+                    android:layout_width="match_parent"
+                    android:layout_height="22dp"
+                    android:layout_gravity="right"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="10dp"
+                    android:text="TELEFONE"
+                    android:textSize="12dp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/itemEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/itemTelefone"
+                    android:layout_gravity="right"
+                    android:paddingLeft="10dp"
+                    android:text="Email"
+                    android:textSize="12dp"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel2"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_below="@id/rel1">
+
+                <TextView
+                    android:id="@+id/idn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="#2"
+                    android:textColor="#00035c"
+                    android:textSize="8dp" />
+
+                <TextView
+                    android:id="@+id/itemEquipamento_2"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/idn2"
+                    android:paddingLeft="8dp"
+                    android:text="Equipamento2"
+                    android:textColor="@android:color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/itemTimestamp_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/itemEquipamento_2"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="2dp"
+                    android:text="Data em que foi add o equipamento"
+                    android:textColor="@android:color/black"
+                    android:textSize="12dp"
+                    android:textStyle="italic" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

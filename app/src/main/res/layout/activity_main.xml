@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout"
+    android:background="@color/corDeFundo"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_border_top">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/rotary_logo" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/nomeDoClube"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:padding="8dp"
+            android:text="Nome do Clube"
+            android:textColor="@color/textoCabecalho"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/btnVoltar"
+            android:src="@drawable/ic_back" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:tint="#000000"
+        android:visibility="gone"
+        android:id="@+id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/searchColor">
+
+        <EditText
+            android:id="@+id/searchField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/searchIcon"
+            android:layout_toRightOf="@+id/cancelIcon"
+            android:hint="Pesquisa"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#03024d"
+            android:textSize="15dp" />
+
+        <ImageButton
+            android:id="@+id/searchIcon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="#dfdfdf"
+            android:src="@drawable/ic_search"
+            android:tint="#000000" />
+
+        <ImageButton
+            android:id="@+id/cancelIcon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:backgroundTint="#dfdfdf"
+            android:src="@drawable/ic_cancel"
+            android:tint="#000000" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomBar"
+        android:layout_below="@id/searchbar" />
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/buttons"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/addPaciente"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/buttons"
+            android:src="@drawable/ic_add_paciente" />
+
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/search_button_show"
+        android:background="@drawable/search_button"
+        android:tint="#000000"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_search"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/txtZeroPacientes"
+        android:layout_width="300dp"
+        android:layout_centerVertical="true"
+        android:layout_height="400dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Nenhum paciente cadastrado"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

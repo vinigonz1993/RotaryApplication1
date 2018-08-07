@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/corDeFundo"
+    tools:context=".EditaPaciente">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_border_top">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/rotary_logo" />
+
+        <TextView
+            android:id="@+id/nomeDoClube"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:padding="8dp"
+            android:text="Nome do Clube"
+            android:textColor="@color/textoCabecalho"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/btnVoltar"
+            android:src="@drawable/ic_back" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/edtID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:padding="12dp"
+        android:text=""
+        android:textSize="18dp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tituloPaciente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:padding="6dp"
+        android:text="EDITAR PACIENTE"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/linLayout"
+        android:layout_below="@id/tituloPaciente">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+
+            <EditText
+
+                android:id="@+id/edtNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Nome"
+                android:inputType="textCapWords" />
+
+            <EditText
+                android:id="@+id/edtNomeDaMae"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtNome"
+                android:layout_margin="5dp"
+                android:hint="Nome da Mãe"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edtDataDeNascimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtNomeDaMae"
+                android:layout_margin="5dp"
+                android:hint="Data de Nascimento"
+                android:inputType="date" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtDataDeNascimento"
+                android:layout_margin="5dp"
+                android:hint="Email"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/edtTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtEmail"
+                android:layout_margin="5dp"
+                android:hint="Telefone"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/edtEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTelefone"
+                android:layout_margin="5dp"
+                android:hint="Endereço"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/txtEquipamentoSelecionado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtEndereco"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/addEquipamento"
+                android:text="Equipamento selecionado"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtRetirada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtEquipamentoSelecionado"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/addEquipamento"
+                android:gravity="center_vertical"
+                android:text="Retirada:"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+
+            <Button
+                android:id="@+id/edtRetirada"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/txtRetirada"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/addEquipamento"
+                android:drawableLeft="@drawable/calendario_icone"
+                android:gravity="center_vertical"
+                android:hint="12/10/2018"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtdev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtRetirada"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/addEquipamento"
+                android:gravity="center_vertical"
+                android:text="Devolução:"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/tempoRetorno_1"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/txtdev"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/addEquipamento"
+                android:drawableLeft="@drawable/calendario_icone"
+                android:gravity="center_vertical"
+                android:hint="12/10/2018"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtRetirada2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtEquipamentoSelecionado_2"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/addEquipamento"
+                android:gravity="center_vertical"
+                android:text="Retirada:"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+
+            <Button
+                android:id="@+id/edtRetirada2"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/txtRetirada2"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/addEquipamento_2"
+                android:drawableLeft="@drawable/calendario_icone"
+                android:gravity="center_vertical"
+                android:hint="12/10/2018"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtdev_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtRetirada2"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/addEquipamento_2"
+                android:gravity="center_vertical"
+                android:text="Devolução:"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/tempoRetorno_2"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/txtdev_2"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/addEquipamento_2"
+                android:drawableLeft="@drawable/calendario_icone"
+                android:hint="12/10/2018"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/txtEquipamentoSelecionado_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnRemover"
+                android:layout_margin="5dp"
+                android:layout_toRightOf="@+id/addEquipamento"
+                android:text="Equipamento selecionado"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/idDoEquipamentoSelecionado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtEquipamentoSelecionado"
+                android:enabled="false"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/idDoEquipamentoSelecionado_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtEquipamentoSelecionado_2"
+                android:enabled="false"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/idDoEquipamentoAntigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idDoEquipamentoSelecionado"
+                android:enabled="false"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/idDoEquipamentoAntigo_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idDoEquipamentoSelecionado_2"
+                android:enabled="false"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/addEquipamento"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/edtEndereco"
+                android:background="@color/btnVoltar"
+                android:src="@drawable/ic_add_cadeira" />
+
+            <ImageButton
+                android:id="@+id/addEquipamento_2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/btnRemover"
+                android:background="@color/btnVoltar"
+                android:src="@drawable/ic_add_cadeira" />
+
+            <Button
+                android:id="@+id/btnRemover"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tempoRetorno_1"
+                android:layout_marginBottom="45dp"
+                android:layout_marginTop="19dp"
+                android:layout_weight="3"
+                android:background="@drawable/button_remove"
+                android:text="Remover Equipamento"
+                android:textColor="@color/textoCabecalho"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/btnRemover_2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tempoRetorno_2"
+                android:layout_marginBottom="45dp"
+                android:layout_marginTop="19dp"
+                android:layout_weight="3"
+                android:background="@drawable/button_remove"
+                android:text="Remover Equipamento"
+                android:textColor="@color/textoCabecalho"
+                android:textSize="12dp" />
+
+            <Button
+                android:id="@+id/btnExcluir"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnRemover_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:layout_weight="3"
+                android:background="@drawable/button_remove"
+                android:padding="19dp"
+                android:text="Excluír Paciente"
+                android:textColor="@color/textoCabecalho" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/btnExcluir" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#096930"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSalvarPaciente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnRemover"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:layout_weight="2"
+            android:background="@drawable/buttons"
+            android:text="Salvar"
+            android:textColor="@color/textoCabecalho" />
+
+    </LinearLayout>
+
+</RelativeLayout>

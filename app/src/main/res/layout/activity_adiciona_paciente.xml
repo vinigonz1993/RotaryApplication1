@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/corDeFundo"
+    android:orientation="vertical"
+    tools:context=".AdicionaPaciente">
+
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_border_top">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/rotary_logo" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/nomeDoClube"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:padding="8dp"
+            android:text="Nome do Clube"
+            android:textColor="@color/textoCabecalho"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/btnVoltar"
+            android:src="@drawable/ic_back" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/edtID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:padding="12dp"
+        android:text=""
+        android:textSize="18dp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tituloPaciente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:padding="6dp"
+        android:text="ADICIONAR PACIENTE"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tituloPaciente">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/edtNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:hint="Nome" />
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/edtNomeDaMae"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtNome"
+                android:layout_margin="5dp"
+                android:hint="Nome da Mãe" />
+
+            <EditText
+                android:id="@+id/edtDataDeNascimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtNomeDaMae"
+                android:layout_margin="5dp"
+                android:hint="Data de Nascimento"
+                android:inputType="date" />
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtDataDeNascimento"
+                android:layout_margin="5dp"
+                android:hint="Email" />
+
+            <EditText
+                android:id="@+id/edtTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtEmail"
+                android:layout_margin="5dp"
+                android:hint="Telefone"
+                android:inputType="number" />
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/edtEndereco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTelefone"
+                android:layout_margin="5dp"
+                android:hint="Endereço" />
+
+            <Button
+                android:id="@+id/btnSalvarPaciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtEndereco"
+                android:layout_centerHorizontal="true"
+                android:background="@color/botaoVerde"
+                android:padding="19dp"
+                android:text="Adicionar Paciente"
+                android:textColor="@android:color/white" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

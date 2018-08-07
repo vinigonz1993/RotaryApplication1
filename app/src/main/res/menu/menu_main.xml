@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/db"
+        android:title="Dashboard"
+        android:icon="@drawable/rotary_logo"/>
+
+    <item android:id="@+id/pacientes"
+        android:title="Pacientes"
+        android:icon="@drawable/paciente_page"/>
+
+    <item android:id="@+id/estoque"
+        android:title="Estoque"
+        android:icon="@drawable/cadeira_page"/>
+
+    <item android:id="@+id/cadeiras"
+        android:title="Cadeiras"
+        android:icon="@drawable/rotary_logo"/>
+
+    <item android:id="@+id/calendario"
+        android:title="Calendario"
+        android:icon="@drawable/rotary_logo"/>
+
+    <item android:id="@+id/logout"
+        android:title="Logout"
+        android:icon="@drawable/rotary_logo"/>
+
+</menu>

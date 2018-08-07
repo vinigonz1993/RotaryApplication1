@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRRR"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e4e4e4"
+    tools:context=".CalendarActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/bottom_border_top">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/rotary_logo" />
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/nomeDoClube"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/imageView"
+            android:padding="8dp"
+            android:text="Nome do Clube"
+            android:textColor="@color/textoCabecalho"
+            android:textStyle="italic" />
+
+        <ImageButton
+            android:id="@+id/btnVoltar"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/btnVoltar"
+            android:src="@drawable/ic_back" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cabecalho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchbar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/bottom_border_top"
+        android:backgroundTint="#0a0f63"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paciente"
+            android:textColor="@color/textoCabecalho"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Devolução em:"
+            android:textColor="@color/textoCabecalho"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <ListView
+
+        android:id="@+id/listCalendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cabecalho" />
+
+    <RelativeLayout
+        android:id="@+id/searchbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/searchColor"
+        android:tint="#000000"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/searchField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/searchIcon"
+            android:layout_toRightOf="@+id/cancelIcon"
+            android:hint="Pesquisa"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#03024d"
+            android:textSize="15dp" />
+
+        <ImageButton
+            android:id="@+id/searchIcon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="#dfdfdf"
+            android:src="@drawable/ic_search"
+            android:tint="#000000" />
+
+        <ImageButton
+            android:id="@+id/cancelIcon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:backgroundTint="#dfdfdf"
+            android:src="@drawable/ic_cancel"
+            android:tint="#000000" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/search_button_show"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="65dp"
+        android:background="@drawable/search_button"
+        android:src="@drawable/ic_search"
+        android:tint="#000000" />
+
+</RelativeLayout>
